@@ -6,18 +6,8 @@ def small(temp):
     temp.remove(max(temp))
     return (2*temp[0]) + (2*temp[1])
 
-'''
-while(0):
-    test = list()
-    for i in range(3):
-        test.append(int(raw_input("")))
-    print small(test)
-'''
-
 for x in boxes:
     temp = [ int(i) for i in x.rstrip().split('x') ]
-    #temp1 = x.rstrip().split('x')
-    #temp = [int(temp1[0]), int(temp1[1]), int(temp1[2]) ]
     ans += ( temp[0] * temp[1] * temp[2] ) + small(temp)
 
 print ans
