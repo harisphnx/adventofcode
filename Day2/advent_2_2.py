@@ -2,12 +2,8 @@ with open("day_2_input.txt") as f:
     boxes = f.readlines()
 ans = 0
 
-def small(temp):
-    temp.remove(max(temp))
-    return (2*temp[0]) + (2*temp[1])
-
-for x in boxes:
-    temp = [ int(i) for i in x.rstrip().split('x') ]
-    ans += ( temp[0] * temp[1] * temp[2] ) + small(temp)
+for line in boxes:
+    a, b, c = sorted([int(x) for x in line.split('x')])
+    ans += (a * b * c) + (2*a + 2*b)
 
 print ans
