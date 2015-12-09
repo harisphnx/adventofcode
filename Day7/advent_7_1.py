@@ -40,4 +40,5 @@ while(flag == 1):
                 gate_dict[temp[4]] = x << y
             if(temp[1] == "RSHIFT"):
                 gate_dict[temp[4]] = x >> y
-print gate_dict['a']        
+#print gate_dict['a']        
+print gate_dict
